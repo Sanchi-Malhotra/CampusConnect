@@ -168,6 +168,22 @@ Built using HTML, CSS, and JavaScript.
 
 ---
 
+## Screenshots
+
+### Home Page
+![Home Page](screenshots/home.png)
+
+### Login Page
+![Login Page](screenshots/login.png)
+
+### Register Page
+![Register Page](screenshots/register.png)
+
+### Product Listing Page
+![Product Listing](screenshots/products.png)
+
+---
+
 ## Spring Boot Concepts Used
 - REST Controllers
 - Dependency Injection

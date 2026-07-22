@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CampusConnect Login</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:
+    radial-gradient(circle at top left,#dbeafe 0%,transparent 40%),
+    radial-gradient(circle at bottom right,#ede9fe 0%,transparent 40%),
+    #f8fafc;
+}
+
+.container{
+    width:430px;
+    background:white;
+    padding:35px;
+    border-radius:25px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.08);
+}
+
+h1{
+    color:#2563eb;
+    text-align:center;
+    margin-bottom:10px;
+}
+
+.university{
+    text-align:center;
+    color:#64748b;
+    margin-bottom:25px;
+}
+
+.tabs{
+    display:flex;
+    background:#f1f5f9;
+    padding:5px;
+    border-radius:12px;
+    margin-bottom:20px;
+}
+
+.tab{
+    flex:1;
+    padding:12px;
+    text-align:center;
+    cursor:pointer;
+    border-radius:8px;
+    transition:.3s;
+}
+
+.active{
+    background:#2563eb;
+    color:white;
+}
+
+.form{
+    display:none;
+}
+
+.active-form{
+    display:block;
+}
+
+input{
+    width:100%;
+    padding:13px;
+    margin:10px 0;
+    border:1px solid #cbd5e1;
+    border-radius:10px;
+    outline:none;
+}
+select{
+
+width:100%;
+padding:13px;
+margin:10px 0;
+
+border:1px solid #cbd5e1;
+border-radius:10px;
+
+outline:none;
+background:white;
+
+}
+
+select:focus{
+
+border-color:#2563eb;
+
+}
+
+input:focus{
+    border-color:#2563eb;
+}
+
+button{
+    width:100%;
+    padding:13px;
+    border:none;
+    border-radius:10px;
+    background:#2563eb;
+    color:white;
+    cursor:pointer;
+    margin-top:10px;
+    font-size:15px;
+}
+
+button:hover{
+    background:#1d4ed8;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🎓 CampusConnect</h1>
+
+<p class="university" id="collegeName">
+    Welcome Student
+</p>
+
+<div class="tabs">
+    <div class="tab active" onclick="showLogin()">Login</div>
+    <div class="tab" onclick="showRegister()">Sign Up</div>
+</div>
+
+<!-- LOGIN FORM -->
+
+<form class="form active-form" id="loginForm">
+
+    <input
+        type="email"
+        id="email"
+        placeholder="College Email"
+        required>
+
+    <input
+        type="password"
+        id="password"
+        placeholder="Password"
+        required>
+
+    <button type="submit">
+        Login
+    </button>
+
+</form>
+
+<!-- SIGN UP FORM -->
+
+<form class="form" id="registerForm">
+
+    <input
+        type="text"
+        id="name"
+        placeholder="Full Name"
+        required>
+
+    <input
+        type="email"
+        id="registerEmail"
+        placeholder="College Email"
+        required>
+
+    <input
+        type="password"
+        id="registerPassword"
+        placeholder="Password"
+        required>
+
+        <select id="university" required>
+
+            <option value="">Select University</option>
+        
+            <option value="BIT Mesra">BIT Mesra</option>
+        
+            <option value="VIT Bhopal">VIT Bhopal</option>
+        
+            <option value="VIT Vellore">VIT Vellore</option>
+            <option value="Other">Other</option>
+        
+        </select>
+
+    <button type="submit">
+        Create Account
+    </button>
+
+</form>
+
+</div>
+
+<script>
+
+document.getElementById("collegeName").innerHTML =
+"Welcome Student 🎓";
+
+function showLogin(){
+
+    document.querySelectorAll(".tab")[0]
+    .classList.add("active");
+
+    document.querySelectorAll(".tab")[1]
+    .classList.remove("active");
+
+    document.getElementById("loginForm")
+    .classList.add("active-form");
+
+    document.getElementById("registerForm")
+    .classList.remove("active-form");
+}
+
+function showRegister(){
+
+    document.querySelectorAll(".tab")[1]
+    .classList.add("active");
+
+    document.querySelectorAll(".tab")[0]
+    .classList.remove("active");
+
+    document.getElementById("registerForm")
+    .classList.add("active-form");
+
+    document.getElementById("loginForm")
+    .classList.remove("active-form");
+}
+
+function goRole(){
+
+    window.location.href="role.html";
+
+}
+
+</script>
+<script src="js/common.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script src="js/toast.js"></script>
+<script src="js/login.js"></script>
+<script src="js/register.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Profile | CampusConnect</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#f8fafc;
+    padding:40px;
+}
+
+.container{
+    max-width:850px;
+    margin:auto;
+}
+
+.profile-card{
+    background:white;
+    border-radius:20px;
+    padding:40px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    text-align:center;
+}
+
+.avatar{
+
+    width:120px;
+    height:120px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:#2563eb;
+
+    color:white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:50px;
+    font-weight:bold;
+
+}
+
+h1{
+
+    margin-top:20px;
+    color:#1e293b;
+
+}
+
+.info{
+
+    margin-top:12px;
+    font-size:18px;
+    color:#64748b;
+
+}
+
+.stats{
+
+    margin-top:35px;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+    gap:20px;
+
+}
+
+.stat{
+
+    background:#eff6ff;
+
+    padding:25px;
+
+    border-radius:15px;
+
+}
+
+.stat h2{
+
+    color:#2563eb;
+    font-size:32px;
+
+}
+
+.stat p{
+
+    margin-top:8px;
+    color:#475569;
+
+}
+
+.buttons{
+
+    margin-top:35px;
+
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+
+}
+
+button{
+
+    padding:13px 22px;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    color:white;
+
+    transition:.3s;
+
+}
+
+.dashboard{
+
+    background:#2563eb;
+
+}
+
+.dashboard:hover{
+
+    background:#1d4ed8;
+
+}
+
+.logout{
+
+    background:#ef4444;
+
+}
+
+.logout:hover{
+
+    background:#dc2626;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="profile-card">
+
+    <div class="avatar" id="avatar"></div>
+
+    <h1 id="name"></h1>
+
+    <div class="info" id="email"></div>
+
+    <div class="info" id="college"></div>
+
+    <div class="info" id="role"></div>
+
+    <div class="stats">
+
+        <div class="stat">
+            <h2 id="listedCount">--</h2>
+            <p>Products Listed</p>
+        </div>
+
+        <div class="stat">
+            <h2 id="requestCount">--</h2>
+            <p>Pending Rental Requests</p>
+        </div>
+
+    </div>
+
+    <div class="buttons">
+
+        <button
+        class="dashboard"
+        onclick="window.location.href='dashboard.html'">
+
+            Dashboard
+
+        </button>
+
+        <button
+        class="logout"
+        onclick="logout()">
+
+            Logout
+
+        </button>
+
+    </div>
+
+</div>
+
+</div>
+
+<script src="js/common.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="js/profile.js"></script>
+
+
+</body>
+</html>

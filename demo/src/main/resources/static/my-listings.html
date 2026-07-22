@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Listings</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+background:#f8fafc;
+padding:40px;
+}
+
+h1{
+margin-bottom:30px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:20px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.image{
+height:150px;
+background:#e2e8f0;
+border-radius:15px;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:50px;
+margin-bottom:15px;
+}
+
+.price{
+color:#2563eb;
+font-weight:bold;
+margin-top:10px;
+}
+
+.actions{
+margin-top:15px;
+display:flex;
+gap:10px;
+}
+
+button{
+padding:10px 15px;
+border:none;
+border-radius:10px;
+cursor:pointer;
+color:white;
+}
+
+.edit{
+background:#2563eb;
+}
+
+.delete{
+background:#ef4444;
+}
+
+</style>
+</head>
+<body>
+
+<h1>📦 My Listings</h1>
+
+<div class="grid">
+
+<div class="card">
+
+<div class="image">
+📚
+</div>
+
+<h3>Engineering Maths Book</h3>
+
+<p class="price">
+₹20/day
+</p>
+
+<div class="actions">
+
+<button class="edit">
+Edit
+</button>
+
+<button class="delete">
+Delete
+</button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="image">
+🧮
+</div>
+
+<h3>Scientific Calculator</h3>
+
+<p class="price">
+₹10/day
+</p>
+
+<div class="actions">
+
+<button class="edit">
+Edit
+</button>
+
+<button class="delete">
+Delete
+</button>
+
+</div>
+
+</div>
+
+</div>
+<script src="js/common.js"></script>
+
+</body>
+</html>

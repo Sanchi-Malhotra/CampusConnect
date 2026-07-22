@@ -1,4 +1,8 @@
 package com.example.demo.entity;
+import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -18,4 +22,8 @@ public class User {
     @Column(unique = true)  
     private String email;
     private String password;
+    @OneToMany(mappedBy = "owner")
+    @JsonIgnore
+    private List<Product> products;
+    private String university;
 }

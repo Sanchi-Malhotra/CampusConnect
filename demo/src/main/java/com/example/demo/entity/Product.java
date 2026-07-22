@@ -22,7 +22,13 @@ public class Product {
     private String category;
 
     private String type;
+     
+    private String imageUrl;
 
+    private String status = "AVAILABLE";
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User owner;//many products to single user
 
     //eg product
     // {
